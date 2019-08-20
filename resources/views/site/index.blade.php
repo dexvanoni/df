@@ -50,7 +50,7 @@
           <ul class="navbar-nav">
             <li><a href="{{ route('inicio')}}">Home</a></li>
             <!--<li><a href="{!! route('about'); !!}">Sobre</a></li>-->
-            <li><a href="{!! route('calculadora'); !!}">Calculadora</a></li>
+            <!--<li><a href="{!! route('calculadora'); !!}">Calculadora</a></li>-->
             <!-- Dropdown -->
             <li class="dropdown">
               <a class="dropdown-toggle" href="#" data-toggle="dropdown">
