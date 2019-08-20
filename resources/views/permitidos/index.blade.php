@@ -33,7 +33,7 @@
         <tr>
             <td>{{ $permitido->email }}</td>
             <td>{{date('d/m/Y', strtotime($permitido->created_at)) }}</td>
-            <td>{{date('d/m/Y', strtotime($permitido->created_at->copy()->addYear())) }}
+            <td>{{date('d/m/Y', strtotime($permitido->created_at->copy()->addMonths(6))) }}
                 <?php 
                     $dt_exp = $permitido->created_at->copy()->addYear();
                     $dt_now = \Carbon\Carbon::now();

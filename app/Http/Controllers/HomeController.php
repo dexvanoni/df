@@ -56,7 +56,7 @@ class HomeController extends Controller
                         return redirect()->to('administracao');
                     }
 
-                    $dt_exp = Carbon::parse($permitido->created_at)->addYear(1);
+                    $dt_exp = Carbon::parse($permitido->created_at)->addMonths(6);
                     $dt_now = Carbon::now();
 
                         if($dt_exp->gt($dt_now)){
@@ -74,8 +74,8 @@ class HomeController extends Controller
                                 return view('home', compact('parametros', 'con_parametros'));        
                          } else {
                             Session::flush();
-                            return redirect('/')
-                                ->with('success','Seu acesso já expirou!! Favor clicar em Solicitar Acesso.');
+                            return redirect('calculadora')
+                                ->with('success','Seu acesso já expirou!! favor entrar em contato com a DF Bordados e solicitar um novo acesso.');
                          }
                 
 

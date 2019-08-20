@@ -83,4 +83,7 @@
         </main>
     </div>
 </body>
+
+    @yield('page-arquivos')
+    @yield('page-scripts')
 </html>

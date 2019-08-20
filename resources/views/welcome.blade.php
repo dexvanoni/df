@@ -92,15 +92,17 @@
                 <img src="/imagens/logo.png" width="100px" height="100px"><br>
 
                 Sistema desenvolvido por DF Brindes Personalizados <br>
+                <strong><b style="color: red">Para solicitar acesso entre em contato conosco!</b></strong><br>
                 Contato: (67) 99122-4547 - WhatsApp<br>
-                <a href="#" data-toggle="modal" data-target="#pg"> Solicitar Acesso</a>
+                Email: relacionamento@dfbordados.com.br
+                <!--<a href="#" data-toggle="modal" data-target="#pg"> Solicitar Acesso</a>-->
             </div>
 
             <div class="links">
-                <a href="https://facebook.com/dfembroidery">Facebook</a>
-                <a href="https://laracasts.com">Instagram</a>
-                <a href="https://laravel-news.com">Email</a>
-                <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#videoModal" data-theVideo="http://www.youtube.com/embed/loFtozxZG0s" >VÍDEO EXPLICATIVO</a>
+                <a href="https://facebook.com/dfembroidery">Página no Facebook</a>
+                <!--<a href="https://laracasts.com">Instagram</a>
+                <a href="https://laravel-news.com">Email</a>-->
+                <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/Hs7yQAnOrEE" >VÍDEO EXPLICATIVO</a>
             </div>
             <!-- Large modal -->
             <div class="modal" tabindex="-1" role="dialog" id="myModal">
@@ -127,7 +129,8 @@
                       Venda de patchs termocolantes
                   </li>
                   <li>
-                        Contatos:<br>
+                      <br>
+                        Para solicitar acesso entre em contato conosco!<br>
                         (67) 99122-4547 - WhatsApp <br>
                         diretor@dfbordados.com.br
                     
@@ -172,6 +175,7 @@
         </div>
         <div class="col">
             <p>DF Brindes Personalizados</p>
+            <p>Para solicitar acesso entre em contato conosco!</p>
             <p>(67) 99122-4547 - WhatsApp</p>
             <p>Email: diretor@dfbordados.com.br</p>
         </div>
@@ -187,12 +191,12 @@
 
 <!--MODAL VÍDEO-->
 <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <div>
-          <iframe width="100%" height="350" src=""></iframe>
+          <iframe width="100%" height="500" src=""></iframe>
         </div>
       </div>
     </div>
