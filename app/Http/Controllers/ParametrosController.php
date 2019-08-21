@@ -42,7 +42,6 @@ class ParametrosController extends Controller
     {
 
         $request->validate([
-            'mil_pontos' => 'required',
             'entretela' => 'required',
             'tnt' => 'required',
             'linha_sup' => 'required',
@@ -90,7 +89,6 @@ class ParametrosController extends Controller
 
         $parametros = Parametro::where('usuario', '=', $request->usuario)->first();
         $parametros->usuario =  $request->usuario;
-        $parametros->mil_pontos =  $request->mil_pontos;
         $parametros->entretela =  $request->entretela;
         $parametros->tnt =  $request->tnt;
         $parametros->linha_sup =  $request->linha_sup;

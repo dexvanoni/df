@@ -35,11 +35,19 @@
                       <div class="card-body">
                         <h5 class="card-title">Letras em ponto cheio</h5>
                         <p class="card-text">Opção para bordado de letras com densidade comum para este fim.</p>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" id="tipo" name="tipo" value="l"> Letras
-                                </label>
+                        <div class="row">
+                            <div class="col">
+                                <div class="radio">
+                                    <center><label for="tipo">Letras</label><br>
+                                        <input type="radio" id="tipo" name="tipo" value="l"> </center>
+                                </div>
                             </div>
+                            <div class="col">
+                               <label for="nivel_l">Nível</label>
+                                <input type="range" class="custom-range" min="0" max="5" step="1" id="nivel_l"> 
+                            </div>
+                        </div>
+                            
                         <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                       </div>
                     </div>
@@ -50,11 +58,18 @@
                       <div class="card-body">
                         <h5 class="card-title">Baixa Densidade</h5>
                         <p class="card-text">Opção para bordado de desenhos com pouca densidade de preenchimento.</p>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" id="tipo" name="tipo" value="m"> Pontos médios
-                                </label>
+                            <div class="row">
+                            <div class="col">
+                                <div class="radio">
+                                    <center><label for="tipo">Pontos médios</label><br>
+                                        <input type="radio" id="tipo" name="tipo" value="m"> </center>
+                                </div>
                             </div>
+                            <div class="col">
+                               <label for="nivel_m">Nível</label>
+                                <input type="range" class="custom-range" min="0" max="5" step="1" id="nivel_m"> 
+                            </div>
+                        </div>
                         <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                       </div>
                     </div>
@@ -65,11 +80,18 @@
                       <div class="card-body">
                         <h5 class="card-title">Alta Densidade</h5>
                         <p class="card-text">Opção para bordado de desenhos com grande densidade de preenchimento.</p>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" id="tipo" name="tipo" value="c"> Preenchimento
-                                </label>
+                            <div class="row">
+                            <div class="col">
+                                <div class="radio">
+                                    <center><label for="tipo">Preenchimento</label><br>
+                                        <input type="radio" id="tipo" name="tipo" value="c"> </center>
+                                </div>
                             </div>
+                            <div class="col">
+                               <label for="nivel_c">Nível</label>
+                                <input type="range" class="custom-range" min="0" max="5" step="1" id="nivel_c"> 
+                            </div>
+                        </div>
                         <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                       </div>
                     </div>

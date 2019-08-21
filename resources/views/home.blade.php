@@ -186,13 +186,13 @@
         // variável $t conta o número de itens na colection que vem do controller
         
         @if ($con_parametros > 0)
-            var val_mil_pontos = {{ $parametros->mil_pontos }};
+            var val_mil_pontos = 0.75;
             var entretela = {{ $parametros->entretela }};
             var tnt = {{ $parametros->tnt }};
             var linha_sup = {{ $parametros->linha_sup }};
             var linha_bob = {{ $parametros->linha_bob }};
             var pontos_min = {{ $parametros->pontos_min }};
-            var lucro = "8";
+            var lucro = "6";
             
         @else {
             var val_mil_pontos = 0;

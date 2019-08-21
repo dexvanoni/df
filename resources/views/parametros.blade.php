@@ -46,24 +46,14 @@
                                 <div class="row">
                                     <div class="col">
                                        <div class="form-group">
-                                        <label for="mil_pontos">Valor para mil pontos<i class="fas fa-question-circle" title="Nunca utilize vírgulas. Separe os centavos com ponto. Ex: 4.5"></i></label>
+                                        <label for="entretela">Entretela <i class="fas fa-question-circle" title="Nunca utilize vírgulas. Separe os centavos com ponto. Ex: 4.5"></i></label>
                                         @if (Session::get('novo') == 'n')
-                                        <input type="text" name="mil_pontos" class="form-control" id="mil_pontos" aria-describedby="mil_pontos" placeholder="Valor cobrado por cada 1000 pontos." pattern="^[^,]*[^ ,][^,]*$" required="required" value="{{$parametros->mil_pontos}}" />
+                                        <input type="text" name="entretela" class="form-control" id="entretela" aria-describedby="entretela" placeholder="Valor pago pela entretela (por metro)." pattern="^[^,]*[^ ,][^,]*$" required="required" value="{{$parametros->entretela}}" />
                                         @else
-                                        <input type="text" name="mil_pontos" class="form-control" id="mil_pontos" aria-describedby="mil_pontos" placeholder="Valor cobrado por cada 1000 pontos." pattern="^[^,]*[^ ,][^,]*$" required="required" />
+                                        <input type="text" name="entretela" class="form-control" id="entretela" aria-describedby="entretela" placeholder="Valor pago pela entretela (por metro)." pattern="^[^,]*[^ ,][^,]*$" required="required">
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col">
-                                   <div class="form-group">
-                                    <label for="entretela">Entretela <i class="fas fa-question-circle" title="Nunca utilize vírgulas. Separe os centavos com ponto. Ex: 4.5"></i></label>
-                                    @if (Session::get('novo') == 'n')
-                                    <input type="text" name="entretela" class="form-control" id="entretela" aria-describedby="entretela" placeholder="Valor pago pela entretela (por metro)." pattern="^[^,]*[^ ,][^,]*$" required="required" value="{{$parametros->entretela}}" />
-                                    @else
-                                    <input type="text" name="entretela" class="form-control" id="entretela" aria-describedby="entretela" placeholder="Valor pago pela entretela (por metro)." pattern="^[^,]*[^ ,][^,]*$" required="required">
-                                    @endif
-                                </div>
-                            </div>
                             <div class="col">
                                <div class="form-group">
                                 <label for="tnt">TNT <i class="fas fa-question-circle" title="Nunca utilize vírgulas. Separe os centavos com ponto. Ex: 4.5"></i></label>

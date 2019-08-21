@@ -8,7 +8,6 @@ class Parametro extends Model
 {
          protected $fillable = [
          	'usuario',
-        	'mil_pontos',
             'entretela',
             'tnt',
             'linha_sup',
