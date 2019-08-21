@@ -52,7 +52,46 @@
 
 <script type="text/javascript">
     $( document ).ready(function() {
-            
+            $('#val_desenvolvimento').hide();
+            document.getElementById("desenv_s").onclick = function() {desenvol()};
+            document.getElementById("desenv_n").onclick = function() {desenvol2()};
+
+            function desenvol(){
+                $('#val_desenvolvimento').show();
+            }
+
+            function desenvol2(){
+                $('#val_desenvolvimento').hide();
+            }
+
+            var slider = document.getElementById("nivel_l");
+            var output = document.getElementById("val_l");
+            output.innerHTML = slider.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            } 
+
+            var slider_m = document.getElementById("nivel_m");
+            var output_m = document.getElementById("val_m");
+            output_m.innerHTML = slider_m.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider_m.oninput = function() {
+              output_m.innerHTML = this.value;
+            }
+
+            var slider_c = document.getElementById("nivel_c");
+            var output_c = document.getElementById("val_c");
+            output_c.innerHTML = slider_c.value; // Display the defaultç slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider_c.oninput = function() {
+              output_c.innerHTML = this.value;
+            } 
+
+
             var sabe = 'y';
             $('#pts').hide();
            document.getElementById("pt").onclick = function() {imagens()};
@@ -76,6 +115,7 @@
             var total_quadrado = altura*largura;
 
             var tipo = $('input[name="tipo"]:checked').val();
+
                 if (tipo == 'l') {
                    
                     if (total_quadrado <= 30) {
@@ -86,6 +126,20 @@
                         cm_quadrado = 178,2;
                     }else{
                         cm_quadrado = 130,1;
+                    }
+
+                    if (slider.value == 1) {
+                        reducao = 50/100;
+                    } else if (slider.value == 2){
+                        reducao = 40/100;
+                    } else if (slider.value == 3){
+                        reducao = 30/100;
+                    } else if (slider.value == 4){
+                        reducao = 20/100;
+                    } else if (slider.value == 5){
+                        reducao = 10/100;
+                    } else {
+                        reducao = 0;
                     }
 
                 }
@@ -102,6 +156,20 @@
                         cm_quadrado = 142,5;
                     }
 
+                    if (slider_m.value == 1) {
+                        reducao = 50/100;
+                    } else if (slider_m.value == 2){
+                        reducao = 40/100;
+                    } else if (slider_m.value == 3){
+                        reducao = 30/100;
+                    } else if (slider_m.value == 4){
+                        reducao = 20/100;
+                    } else if (slider_m.value == 5){
+                        reducao = 10/100;
+                    } else {
+                        reducao = 0;
+                    }
+
                 }
                 if (tipo == 'c') {
                     
@@ -114,10 +182,25 @@
                     }else{
                         cm_quadrado = 156,5;
                     }
+
+                    if (slider_c.value == 1) {
+                        reducao = 50/100;
+                    } else if (slider_c.value == 2){
+                        reducao = 40/100;
+                    } else if (slider_c.value == 3){
+                        reducao = 30/100;
+                    } else if (slider_c.value == 4){
+                        reducao = 20/100;
+                    } else if (slider_c.value == 5){
+                        reducao = 10/100;
+                    } else {
+                        reducao = 0;
+                    }
                 }
 
-               
+                pontos_originais = total_quadrado*cm_quadrado;
                 pontos_totais = total_quadrado*cm_quadrado;
+                pontos_totais = pontos_totais - (reducao * pontos_totais);
                 botao.setAttribute("placeholder", pontos_totais);
                 $('#pts').hide();
                 alert('Seu número de pontos para cálculo: ' + pontos_totais);
@@ -211,6 +294,7 @@
                 //VALORES DIGITADOS NA CALCULADORA
                 //$('#tecido').focusout(function(){
                     function myFunction(){
+                        
                         if (sabe == 'n') {
                             var mil_pontos = pontos_totais;          
                         }else{
@@ -218,7 +302,7 @@
                         }
                   
                   var cores = parseInt($('#cores').val());
-                  var desenv = $('input[name="desenvolvimento"]:checked').val();
+                  var d = $('input[name="desenvolvimento"]:checked').val();
                   var entret = $('#entret:checked').val();
                   var tn = $('#tn:checked').val();
                   var qtn = parseInt($('#qtn').val());
@@ -230,12 +314,19 @@
 
                   var divideMil = mil_pontos / 1000;
                   var val_final_mil_pontos = divideMil * val_mil_pontos;
+                 
+             
+                     if (d == 'S') {
+                        val_desenvolvimento = parseInt($('#val_desenvolvimento').val());
+                     }else{
+                        val_desenvolvimento = 0;
+                     }
 
-                  if (desenv == 'S') {
-                    var desenvolvimento = divideMil*1.2;
-                  } else {
-                    var desenvolvimento = 0;
-                  }
+                  //if (desenv == 'S') {
+                  //  var desenvolvimento = divideMil*1.2;
+                  //} else {
+                  //  var desenvolvimento = 0;
+                  //}
 
                   //cálculo de entretela e TNT
                     var tamEntret = 100 * 140;
@@ -289,11 +380,13 @@
                     } else if (cores > 8) {
                         hora_trabalhada = ((valor_hora*tempo)/60) + 1.5;
                     }
+
+
                 
                 var val_final_tecido = qtn * tecido;
 
-                  var total = (valor_final_entret + valor_final_tnt + val_final_ln_s + val_final_ln_b + desgaste + val_final_mil_pontos + hora_trabalhada)*qtn + desenvolvimento + val_final_tecido;
-
+                  var total = (valor_final_entret + valor_final_tnt + val_final_ln_s + val_final_ln_b + desgaste + val_final_mil_pontos + hora_trabalhada)*qtn + val_final_tecido + val_desenvolvimento;
+                  
                   if (desconto > 0){
                         var desc = desconto / 100;
                         total = total - (desc * total);

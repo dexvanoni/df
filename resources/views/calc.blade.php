@@ -43,8 +43,8 @@
                                 </div>
                             </div>
                             <div class="col">
-                               <label for="nivel_l">Nível</label>
-                                <input type="range" class="custom-range" min="0" max="5" step="1" id="nivel_l"> 
+                               <label for="nivel_l">Nível  <span id="val_l" class="badge badge-pill badge-success"></span></label>
+                                <input type="range" class="custom-range" min="1" max="5" step="1" id="nivel_l" value="3"> 
                             </div>
                         </div>
                             
@@ -66,8 +66,8 @@
                                 </div>
                             </div>
                             <div class="col">
-                               <label for="nivel_m">Nível</label>
-                                <input type="range" class="custom-range" min="0" max="5" step="1" id="nivel_m"> 
+                               <label for="nivel_l">Nível  <span id="val_m" class="badge badge-pill badge-success"></span></label>
+                                <input type="range" class="custom-range" min="1" max="5" step="1" id="nivel_m" value="3"> 
                             </div>
                         </div>
                         <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
@@ -88,8 +88,8 @@
                                 </div>
                             </div>
                             <div class="col">
-                               <label for="nivel_c">Nível</label>
-                                <input type="range" class="custom-range" min="0" max="5" step="1" id="nivel_c"> 
+                               <label for="nivel_l">Nível  <span id="val_c" class="badge badge-pill badge-success"></span></label>
+                                <input type="range" class="custom-range" min="1" max="5" step="1" id="nivel_c" value="3"> 
                             </div>
                         </div>
                         <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
@@ -131,12 +131,13 @@
                     <label><strong> Cobrar Desenvolvimento da matriz:</strong></label>
                     <div class="radio">
                         <label>
-                            <input type="radio" id="desenv" name="desenvolvimento" value="S"> Sim    
+                            <input type="radio" id="desenv_s" name="desenvolvimento" value="S"> Sim    
                         </label>
+                            <input type="text" id="val_desenvolvimento" name="val_desenvolvimento" placeholder="Qual valor?"> 
                     </div>
                     <div class="radio">
                         <label>
-                            <input type="radio" id="desenv" name="desenvolvimento" value="N"> Não
+                            <input type="radio" id="desenv_n" name="desenvolvimento" value="N"> Não
                         </label>
                     </div>
                     <div class="radio">
