@@ -21,7 +21,6 @@ class CreateParametrosTable extends Migration
               $table->string('linha_sup');
               $table->string('linha_bob');
               $table->string('pontos_min');
-              $table->string('lucro');
             $table->timestamps();
         });
     }

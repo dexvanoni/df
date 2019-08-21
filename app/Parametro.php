@@ -14,7 +14,6 @@ class Parametro extends Model
             'linha_sup',
             'linha_bob',
             'pontos_min',
-            'lucro',
 
     ];
 }

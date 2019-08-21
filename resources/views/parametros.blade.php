@@ -109,14 +109,7 @@
                 </div>
             </div>
             <div class="col">
-               <div class="form-group">
-                <label for="lucro">Lucro mensal <i class="fas fa-question-circle" title="Nunca utilize vírgulas ou pontos. Ex: 4000"></i></label>
-                @if (Session::get('novo') == 'n')
-                <input type="text" name="lucro" class="form-control" id="lucro" aria-describedby="lucro" placeholder="Estimativa de lucro mensal em reais." pattern="^[^,]*[^ ,][^,]*$" required="required" value="{{$parametros->lucro}}" />
-                @else
-                <input type="text" name="lucro" class="form-control" id="lucro" aria-describedby="lucro" placeholder="Estimativa de lucro mensal em reais." pattern="^[^,]*[^ ,][^,]*$" required="required">
-                @endif
-            </div>
+               
         </div>
 
     </div>

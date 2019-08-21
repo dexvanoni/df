@@ -78,7 +78,7 @@
             var tipo = $('input[name="tipo"]:checked').val();
                 if (tipo == 'l') {
                    
-                    if (total_quadrado < 30) {
+                    if (total_quadrado <= 30) {
                         cm_quadrado = 305,5;    
                     }else if(total_quadrado >= 31 <= 80) {
                         cm_quadrado = 194;
@@ -92,7 +92,7 @@
 
                 if (tipo == 'm') {
 
-                    if (total_quadrado < 30) {
+                    if (total_quadrado <= 30) {
                         cm_quadrado = 350,5;    
                     }else if(total_quadrado >= 31 <= 80) {
                         cm_quadrado = 205;
@@ -105,7 +105,7 @@
                 }
                 if (tipo == 'c') {
                     
-                    if (total_quadrado < 30) {
+                    if (total_quadrado <= 30) {
                         cm_quadrado = 389,5;    
                     }else if(total_quadrado >= 31 <= 80) {
                         cm_quadrado = 246;
@@ -192,7 +192,7 @@
             var linha_sup = {{ $parametros->linha_sup }};
             var linha_bob = {{ $parametros->linha_bob }};
             var pontos_min = {{ $parametros->pontos_min }};
-            var lucro = {{ $parametros->lucro }};
+            var lucro = "8";
             
         @else {
             var val_mil_pontos = 0;

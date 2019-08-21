@@ -102,7 +102,7 @@
                 <a href="https://facebook.com/dfembroidery">Página no Facebook</a>
                 <!--<a href="https://laracasts.com">Instagram</a>
                 <a href="https://laravel-news.com">Email</a>-->
-                <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/Hs7yQAnOrEE" >VÍDEO EXPLICATIVO</a>
+                <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/poMzGTU1RcQ" >VÍDEO EXPLICATIVO</a>
             </div>
             <!-- Large modal -->
             <div class="modal" tabindex="-1" role="dialog" id="myModal">
@@ -196,7 +196,7 @@
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <div>
-          <iframe width="100%" height="500" src=""></iframe>
+          <iframe width="100%" height="500" src="" allowfullscreen></iframe>
         </div>
       </div>
     </div>

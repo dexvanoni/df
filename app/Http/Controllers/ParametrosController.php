@@ -48,7 +48,6 @@ class ParametrosController extends Controller
             'linha_sup' => 'required',
             'linha_bob' => 'required',
             'pontos_min' => 'required',
-            'lucro' => 'required',
         ]);
 
         Parametro::create($request->all());
@@ -97,7 +96,6 @@ class ParametrosController extends Controller
         $parametros->linha_sup =  $request->linha_sup;
         $parametros->linha_bob =  $request->linha_bob;
         $parametros->pontos_min =  $request->pontos_min;
-        $parametros->lucro =  $request->lucro;
         $parametros->save();
 
         return redirect()->route('home')
